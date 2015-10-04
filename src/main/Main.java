@@ -7,7 +7,7 @@ import main.ru.javawebinar.webapp.model.Link;
  * User: T.Berenzon
  * Date: 18.06.2014
  */
-public class Main {
+ public class Main {
 
     public static void main(String[] args) {
         if (args.length > 0) {
