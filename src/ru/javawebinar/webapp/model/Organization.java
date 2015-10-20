@@ -1,4 +1,4 @@
-package main.ru.javawebinar.webapp.model;
+package ru.javawebinar.webapp.model;
 
 import java.util.Arrays;
 import java.util.List;

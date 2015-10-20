@@ -1,6 +1,6 @@
-package main.ru.javawebinar.webapp.store;
+package ru.javawebinar.webapp.storage;
 
-import main.ru.javawebinar.webapp.model.Resume;
+import ru.javawebinar.webapp.model.Resume;
 
 import java.util.Collection;
 

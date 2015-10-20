@@ -1,6 +1,4 @@
-package main.ru.javawebinar.webapp.model;
-
-import java.io.Serializable;
+package ru.javawebinar.webapp.model;
 
 /**
  * GKislin

@@ -1,7 +1,8 @@
-package main.ru.javawebinar.webapp.model;
+package ru.javawebinar.webapp.model;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.UUID;
 
 /**
@@ -10,7 +11,7 @@ import java.util.UUID;
  */
 public class Resume {
     private final String uuid;
-    private final String fullName;
+    private String fullName;
     private final Map<ContactType, String> contacts = new HashMap<>();
     private final Map<SectionType, Section> sections = new HashMap<>();
 
@@ -19,6 +20,8 @@ public class Resume {
     }
 
     public Resume(String uuid, String fullName) {
+        Objects.requireNonNull(fullName);
+        Objects.requireNonNull(uuid);
         this.uuid = uuid;
         this.fullName = fullName;
     }
@@ -47,6 +50,9 @@ public class Resume {
         sections.put(type, section);
     }
 
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -58,17 +64,7 @@ public class Resume {
 
         Resume resume = (Resume) o;
 
-        if (!uuid.equals(resume.uuid)) {
-            return false;
-        }
-        if (!fullName.equals(resume.fullName)) {
-            return false;
-        }
-        if (!contacts.equals(resume.contacts)) {
-            return false;
-        }
-        return sections.equals(resume.sections);
-
+        return uuid.equals(resume.uuid) && fullName.equals(resume.fullName) && contacts.equals(resume.contacts) && sections.equals(resume.sections);
     }
 
     @Override
@@ -82,6 +78,6 @@ public class Resume {
 
     @Override
     public String toString() {
-        return "{fullName='" + fullName + " (" +uuid+")}";
+        return "{fullName='" + fullName + " (" + uuid + ")}";
     }
 }

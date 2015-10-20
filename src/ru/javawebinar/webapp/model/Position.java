@@ -1,12 +1,10 @@
-package main.ru.javawebinar.webapp.model;
-
-import main.ru.javawebinar.webapp.util.DateUtil;
+package ru.javawebinar.webapp.model;
 
 import java.time.LocalDate;
 import java.time.Month;
 
-import static main.ru.javawebinar.webapp.util.DateUtil.NOW;
-import static main.ru.javawebinar.webapp.util.DateUtil.of;
+import static ru.javawebinar.webapp.util.DateUtil.NOW;
+import static ru.javawebinar.webapp.util.DateUtil.of;
 
 /**
  * GKislin

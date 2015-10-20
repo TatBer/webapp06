@@ -1,4 +1,4 @@
-package main.ru.javawebinar.webapp.util;
+package ru.javawebinar.webapp.util;
 
 import java.time.LocalDate;
 import java.time.Month;
